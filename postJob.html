@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post a Job</title>
+    <link rel="stylesheet" href="css/postJob.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Post a job</h1>
+        <form action="./api/post_job.php" method="POST"> 
+            <div class="form-group">
+                <label for="jobTitle">Job Title</label>
+                <input type="text" id="jobTitle" name="jobTitle" placeholder="Add job title, role, vacancies etc" required>
+            </div>
+            <div class="form-group">
+                <label for="tags">Tags</label>
+                <input type="text" id="tags" name="tags" placeholder="Job keyword, tags etc..." required>
+            </div>
+            <div class="form-group">
+                <label for="jobRole">Job Role</label>
+                <select id="jobRole" name="jobRole" required>
+                    <option value="">Select...</option>
+                    <option value="Developer">Developer</option>
+                    <option value="Designer">Designer</option>
+                    <option value="Manager">Manager</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="minSalary">Min Salary</label>
+                <input type="number" id="minSalary" name="minSalary" placeholder="Minimum salary..." required>
+                <span>USD</span>
+            </div>
+            <div class="form-group">
+                <label for="maxSalary">Max Salary</label>
+                <input type="number" id="maxSalary" name="maxSalary" placeholder="Maximum salary..." required>
+                <span>USD</span>
+            </div>
+            <div class="form-group">
+                <label for="salaryType">Salary Type</label>
+                <select id="salaryType" name="salaryType" required>
+                    <option value="">Select...</option>
+                    <option value="Monthly">Monthly</option>
+                    <option value="Annually">Annually</option>
+                </select>
+            </div>
+            <h2>Advance Information</h2>
+            <div class="form-group">
+                <label for="education">Education</label>
+                <select id="education" name="education" required>
+                    <option value="">Select...</option>
+                    <option value="Bachelor's Degree">Bachelor's Degree</option>
+                    <option value="Master's Degree">Master's Degree</option>
+                    <option value="High School">High School</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="experience">Experience</label>
+                <select id="experience" name="experience" required>
+                    <option value="">Select...</option>
+                    <option value="1-3 years">1-3 years</option>
+                    <option value="3-5 years">3-5 years</option>
+                    <option value="5+ years">5+ years</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="jobType">Job Type</label>
+                <select id="jobType" name="jobType" required>
+                    <option value="">Select...</option>
+                    <option value="Full-time">Full-time</option>
+                    <option value="Part-time">Part-time</option>
+                    <option value="Contract">Contract</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="vacancies">Vacancies</label>
+                <select id="vacancies" name="vacancies" required>
+                    <option value="">Select...</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="expirationDate">Expiration Date</label>
+                <input type="date" id="expirationDate" name="expirationDate" required>
+            </div>
+            <div class="form-group">
+                <label for="jobLevel">Job Level</label>
+                <select id="jobLevel" name="jobLevel" required>
+                    <option value="">Select...</option>
+                    <option value="Entry Level">Entry Level</option>
+                    <option value="Mid Level">Mid Level</option>
+                    <option value="Senior Level">Senior Level</option>
+                </select>
+            </div>
+            <h2>Apply Job on:</h2>
+            <div class="radio-group">
+                <input type="radio" id="jobpilot" name="applyOption" value="Jobpilot" checked>
+                <label for="jobpilot">On Jobpilot</label>
+                <p>Candidate will apply using Jobpilot & all applications will show on your dashboard.</p>
+            </div>
+            <div class="radio-group">
+                <input type="radio" id="externalPlatform" name="applyOption" value="External Platform">
+                <label for="externalPlatform">External Platform</label>
+                <p>Candidate will apply on your website.</p>
+            </div>
+            <div class="radio-group">
+                <input type="radio" id="onYourEmail" name="applyOption" value="Email">
+                <label for="onYourEmail">On Your Email</label>
+                <p>Candidate will apply on your email address.</p>
+            </div>
+            <div class="form-group">
+                <button type="submit">Post Job</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
